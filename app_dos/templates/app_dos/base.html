@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1a202c; background: #f0fff4; min-height: 100vh; display: flex; flex-direction: column; }
+        .contenedor { width: 90%; max-width: 1000px; margin: 0 auto; flex: 1; }
+        header { background: #276749; color: #ffffff; padding: 1.2rem 0; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+        header .contenedor { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.4rem; }
+        nav a { color: #ffffff; text-decoration: none; margin-left: 1rem; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        main { margin: 2.5rem 0; }
+        .tarjeta { background: #ffffff; border-radius: 10px; padding: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+        .tarjeta h2 { color: #276749; margin-bottom: 1rem; }
+        .tarjeta p { margin-bottom: 1rem; }
+        .etiqueta { display: inline-block; background: #f0fff4; color: #276749; border: 1px solid #c6f6d5; border-radius: 999px; padding: .3rem 1rem; font-size: .85rem; }
+        .boton { display: inline-block; background: #276749; color: #ffffff; padding: .6rem 1.4rem; border-radius: 6px; text-decoration: none; margin-top: 1rem; }
+        .boton:hover { background: #22543d; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid #e2e8f0; padding: .75rem; text-align: left; }
+        th { background: #edf2f7; color: #276749; }
+        tr:nth-child(even) { background: #f7fafc; }
+        footer { background: #22543d; color: #c6f6d5; text-align: center; padding: 1rem 0; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>App Dos</h1>
+            <nav>
+                <a href="{% url 'inicio' %}">Inicio</a>
+                <a href="{% url 'horario' %}">Horario</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block contenido %}{% endblock %}
+
+    <footer>
+        <div class="contenedor">Proyecto de Omar Barriga - Evaluación Sumativa 01</div>
+    </footer>
+</body>
+</html>
