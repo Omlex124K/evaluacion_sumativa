@@ -1,7 +1,7 @@
 """
 URL configuration for Proyecto_backend project.
 
-<a>PORTADA saluda> The `urlpatterns` list routes URLs to views.
+The `urlpatterns` list routes URLs to views.
 """
 from django.contrib import admin
 from django.urls import path, include
