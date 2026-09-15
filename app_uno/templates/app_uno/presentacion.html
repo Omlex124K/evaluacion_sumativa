@@ -1,0 +1,14 @@
+{% extends 'app_uno/base.html' %}
+
+{% block contenido %}
+<main>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <span class="etiqueta">Vista 2 de app_uno</span>
+            <h2>Presentación del Alumno</h2>
+            <p>Mi nombre es Omar Barriga. Esta segunda vista es totalmente independiente de la primera y demuestra la correcta configuración de URLs dentro de la aplicación app_uno.</p>
+            <a class="boton" href="{% url 'portada' %}">Volver a la Portada</a>
+        </div>
+    </div>
+</main>
+{% endblock %}
