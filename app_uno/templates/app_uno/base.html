@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <style>
+        :root { color-scheme: light; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2d3748; background: #f7fafc; min-height: 100vh; display: flex; flex-direction: column; }
+        .contenedor { width: 90%; max-width: 1000px; margin: 0 auto; flex: 1; }
+        header { background: #2b6cb0; color: #ffffff; padding: 1.2rem 0; box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+        header .contenedor { display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.4rem; }
+        nav a { color: #ffffff; text-decoration: none; margin-left: 1rem; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        main { margin: 2.5rem 0; }
+        .tarjeta { background: #ffffff; border-radius: 10px; padding: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+        .tarjeta h2 { color: #2b6cb0; margin-bottom: 1rem; }
+        .tarjeta p { margin-bottom: 1rem; }
+        .etiqueta { display: inline-block; background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; border-radius: 999px; padding: .3rem 1rem; font-size: .85rem; }
+        .boton { display: inline-block; background: #2b6cb0; color: #ffffff; padding: .6rem 1.4rem; border-radius: 6px; text-decoration: none; margin-top: 1rem; }
+        .boton:hover { background: #2c5282; }
+        footer { background: #2d3748; color: #cbd5e0; text-align: center; padding: 1rem 0; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <h1>App Uno</h1>
+            <nav>
+                <a href="{% url 'portada' %}">Portada</a>
+                <a href="{% url 'presentacion' %}">Presentación</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block contenido %}{% endblock %}
+
+    <footer>
+        <div class="contenedor">Proyecto de Omar Barriga - Evaluación Sumativa 01</div>
+    </footer>
+</body>
+</html>
