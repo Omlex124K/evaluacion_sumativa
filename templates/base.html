@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Proyecto Django de Omar Barriga</h1>
+    </header>
+    <nav>
+        <a href="/catalogo/productos/">Productos</a>
+        <a href="/catalogo/ofertas/">Ofertas</a>
+        <a href="/servicios/lista/">Servicios</a>
+        <a href="/servicios/contacto/">Contacto</a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Evaluación Sumativa N° 01 - Programación Back End</p>
+    </footer>
+</body>
+</html>
